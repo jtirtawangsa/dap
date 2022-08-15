@@ -4,8 +4,8 @@ import (
 	"log"
 	"strconv"
 	"strings"
-	em "untel/dap/emulator"
-	"untel/dap/scanner"
+	"dap/emulator"
+	"dap/scanner"
 )
 
 type nameattr struct {
