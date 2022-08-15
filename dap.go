@@ -7,10 +7,10 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
-	"untel/dap/emulator"
-	"untel/dap/parser"
-	"untel/dap/scanner"
-	"untel/dap/ui"
+	"dap/emulator"
+	"dap/parser"
+	"dap/scanner"
+	"dap/ui"
 )
 
 var (
