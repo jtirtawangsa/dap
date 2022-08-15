@@ -1,0 +1,73 @@
+Additional features for the DAP emulation
+
+STRING
+declaration:
+variable_list : string
+
+capability:
+- string assignment
+- input string
+- output string
+- taking an element of a string as a character, similar to array index
+- appending a char to end of string
+- taking substring
+- reassigning a string variable
+- comparing two strings (<, <=, >, >=, !=)
+
+implementation:
+- as predefined array of values with 80 allocated spaces
+
+question:
+- will define new primitive operations or will implement in existing ones
+
+FLOATING POINT / REAL
+declaration:
+variable_list : real
+
+implemenation:
+- add exponent values (1 byte) alongside the original stack space
+- exponent values are zeros for non real numbers
+- a + b => equalize the exponent to the higher degree, then add
+- a - b => equalize the exponent to the higher degree, then subtract
+- a * b => multiply a*b mantiss values and add a+b exponents
+- a / b => divide a/b mantiss values and subtract a-b exponents, check that b is not zero
+- compare as if a virtual subtraction and check the result
+
+ARRAY
+declaration:
+variable_list : array [n] of type
+
+notes: optional keyword "array" and "of"
+       alternative declaration [1..n], else index starts from zero
+
+capability:
+- whole array assignment
+- individual element array access, a[i] := val
+
+FUNCTION
+declaration:
+function fname (parameter_list) : type
+
+notes:
+optional ":", and also can be replaced by "->"
+parameter_list similar to variable declaration
+function parameter_list has by value only parameter transfer
+may add "input" keyword as prefix
+
+capability:
+returning values by "return expression"
+or returning values by "fname := expression"
+called as part of an expression (as literal value)
+can be called recursively
+
+PROCEDURE
+declaration:
+procedure pname (parameter_list)
+
+notes:
+Parameter_list can be by reference also (keyword output, i/o, input-output, input/output, ref, or var).
+Prefered keyword is "ref"
+
+capability:
+called as a statement/instruction
+can be called recursively

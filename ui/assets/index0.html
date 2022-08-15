@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>DAP Algorithm Animation</title>
+  </head>
+  <body>
+    <div id="mainscreen">
+      <div id="cmdbar" style="display:flex;" align="center">
+        <button id="step">Step</button>
+        <button id="trace">Trace</button>
+        <button id="run">Run</button>
+        <button id="restart">Restart</button>
+        <button id="exit">Exit</button>
+        <input id="indev" type="text" style="flex:1">
+        <input id="errdev" type="text" readonly="readonly" style="flex:2;background-color:yellow;"></div>
+      <div id="anim" style="display:flex;"><br>
+        <div id="console" style="flex:1; overflow:auto;"> <br>
+          <h3 id="con_title" align="center" style="font-family:'Latin Modern Mono Caps'; margin:0px;">Console<br>
+          </h3>
+          <div id="conarea" style="font-family:'Latin Modern Mono'; border:medium solid lightgrey; border-radius: 5px"></div>
+        </div>
+        <div id="output" style="flex:1; overflow:auto;"> <br>
+          <h3 id="out_title" align="center" style="font-family:'Latin Modern Mono Caps'; margin:0px;">Output<br>
+          </h3>
+          <div id="outarea" style="font-family:'Latin Modern Mono'; overflow:auto; border:medium solid lightgrey; border-radius: 5px"></div>
+        </div>
+        <div id="input" style="flex:1;"> <br>
+          <h3 id="inp_title" align="center" style="font-family:'Latin Modern Mono Caps'; overflow:auto; margin:0px;">Input<br>
+          </h3>
+          <div id="inparea" style="font-family:'Latin Modern Mono'; border:medium solid lightgrey; border-radius: 5px"></div>
+        </div>
+        <div id="memory" style="flex:1.5; overflow:auto;"> <br>
+          <h3 id="mem_title" align="center" style="font-family:'Latin Modern Mono Caps'; margin:0px;">Memory<br>
+          </h3>
+          <div id="memarea" style="font-family:'Latin Modern Mono'; border:medium solid lightgrey; border-radius: 5px">
+          </div>
+        </div>
+        <div id="program" style="flex:2; overflow:auto;"> <br>
+          <h3 id="prg_title" align="center" style="font-family:'Latin Modern Mono Caps'; margin:0px;">Program<br>
+          </h3>
+          <div style="font-family:'Latin Modern Mono'; border:medium solid lightgrey; border-radius: 5px" id="prgarea"></div></div>
+      </div>
+    </div>
+  </body>
+    <script src="/assets/webui.js"></script>
+</html>
